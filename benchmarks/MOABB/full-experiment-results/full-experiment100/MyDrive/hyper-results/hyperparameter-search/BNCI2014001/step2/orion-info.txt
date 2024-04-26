@@ -1,0 +1,85 @@
+ /usr/local/lib/python3.10/dist-packages/orion/benchmark/task/profet/model_utils.py:32: RuntimeWarning:The `profet` extras needs to be installed in order to use the Profet tasks.
+Error: cannot import name 'Tester' from 'numpy.testing' (/usr/local/lib/python3.10/dist-packages/numpy/testing/__init__.py)
+Use `pip install orion[profet]` to install the profet extras.
+Identification
+==============
+name: hyperparameter-search_step2
+version: 1
+user: root
+
+
+Commandline
+===========
+./run_experiments.sh --hparams /content/results/hyperparameter-search/BNCI2014001/step1/best_hparams.yaml --data_folder /content/data/BNCI2014001 --seed 1986 --output_folder /content/results/hyperparameter-search/BNCI2014001/step2/exp --nsbj 3 --nsess 2 --nruns 1 --eval_metric acc --eval_set dev --train_mode leave-one-session-out --rnd_dir True --max_num_segments~uniform(2, 6, discrete=True) --amp_delta~uniform(0.0, 0.5) --snr_white_low~uniform(0.0, 15, precision=2) --snr_white_delta~uniform(5.0, 20.0, precision=3)
+
+
+Config
+======
+max trials: 4
+max broken: 3
+working dir: 
+
+
+Algorithm
+=========
+tpe:
+    equal_weight: False
+    full_weight_num: 25
+    gamma: 0.25
+    max_retry: 100
+    n_ei_candidates: 24
+    n_initial_points: 20
+    parallel_strategy:
+        of_type: StatusBasedParallelStrategy
+        strategy_configs:
+            broken:
+                of_type: MaxParallelStrategy
+    prior_weight: 1.0
+    seed: 1986
+
+
+Space
+=====
+/amp_delta: uniform(0.0, 0.5)
+/max_num_segments: uniform(2, 6, discrete=True)
+/snr_white_delta: uniform(5.0, 20.0, precision=3)
+/snr_white_low: uniform(0.0, 15.0, precision=2)
+
+
+Meta-data
+=========
+user: root
+datetime: 2024-04-25 17:29:59.437577
+orion version: 0.2.7
+VCS:
+  HEAD_sha: 4736b71f09a9f57121c6b0d25a4d17d796995f8e
+  active_branch: main
+  diff_sha: 4ba659a598ab4b03ece8952df79469c66a9ac8db4121ded393658ea60ed57136
+  is_dirty: True
+  type: git
+
+
+Parent experiment
+=================
+root:
+parent:
+adapter:
+
+
+Stats
+=====
+completed: True
+trials completed: 4
+best trial:
+  id: ccc6440266c862a9b8f8ace7ffee1511
+  evaluation: 0.30059523809523814
+  params:
+    /amp_delta: 0.3884
+    /max_num_segments: 4
+    /snr_white_delta: 8.62
+    /snr_white_low: 14.0
+start time: 2024-04-25 17:29:59.437577
+finish time: 2024-04-25 18:19:09.119149
+elapsed_time: 0:49:09.346873
+
+

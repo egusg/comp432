@@ -1,0 +1,13 @@
+hparams: /content/comp432/benchmarks/MOABB/hparams/MotorImagery/BNCI2014001/EEGNetE2.yaml
+data_folder: /content/data/BNCI2014001
+cached_data_folder: /content/data
+output_folder: /content/results/full-experimentEEGNet2/BNCI2014001
+nsbj: 9
+nsess: 2
+seed: 11176
+nruns: 4
+eval_metric: acc
+eval_set: test
+train_mode: leave-one-session-out
+rnd_dir: False
+additional flags: --number_of_epochs 200 --device cuda 
