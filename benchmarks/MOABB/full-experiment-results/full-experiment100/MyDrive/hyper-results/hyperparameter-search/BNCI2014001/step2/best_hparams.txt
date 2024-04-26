@@ -1,4 +1,0 @@
-amp_delta: 0.3884
-max_num_segments: 4
-snr_white_delta: 8.62
-snr_white_low: 14.0
