@@ -1,0 +1,15 @@
+avg_models: 14
+batch_size_exponent: 4
+cnn_septemporal_kernelsize_: 16
+cnn_septemporal_point_kernels_ratio_: 4
+cnn_septemporal_pool: 2
+cnn_spatial_depth_multiplier: 4
+cnn_temporal_kernels: 9
+cnn_temporal_kernelsize: 48
+dropout: 0.3328
+fmax: 46.4
+fmin: 1.4
+lr: 0.0005
+n_steps_channel_selection: 2
+number_of_epochs: 817
+tmax: 3.8
