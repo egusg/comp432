@@ -1,1 +1,0 @@
-../LSTM/librispeech_prepare.py
